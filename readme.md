@@ -1,4 +1,4 @@
-report-submodules
+report-submodules-vs-monorepo
 ===
 
 Choosing how to structure your version management can have a huge impact on the workflow of your team down the line. This report discusses differences, pros and cons of organizing a project as a monorepo vs. using multiple GitHub repositories as submodules in a parent repository.
@@ -47,7 +47,7 @@ git submodule add https://github.com/user/admin-ui.git
 git submodule add https://github.com/user/customer-ui.git
 ```
 ___
-### 4. Initialize and update submodules.
+### 4. Initialize and update submodules
 
 After cloning the parent repository, initialize and update all submodules:
 
@@ -63,34 +63,20 @@ git commit -m "Added microservice repos as submodules"
 git push
 ```
 
-Navigating to the parent repository, you can see the submodules listed as folders:
+Navigating to the parent repository in GitHub, you can see the submodules listed as folders:
 
 ![The submodules in the parent repository](img/submodules-repo.png)
 *The submodules are snapshots of the specific branch at the time of adding them. To update them to the latest version, you first need to have their repos updated and then push those changes to the parent repo.*
 
-To update the submodules to their latest changes on main, navigate to each repository and run:
-
+Update all submodules to their latest commit on the tracked branch (usually main):
 ```
-# Navigate to the submodule repo
-cd path/to/repo
-
-# Fetch the latest changes from the remote
-git fetch origin main
-
-# Update the submodule to the latest commit
-git checkout main
-git pull origin main
+git submodule update --remote
 ```
 
-After updating the submodules, navigate back to the parent repository and commit the changes:
-
+Commit the changes in the parent repository to record the updated commits of each submodule:
 ```
-# Navigate back to the parent repository
-cd path/to/parent-repo
-
-# Add the updated submodule, commit and push
-git add path/to/submodule-repo
-git commit -m "Update avec-rest-api submodule to latest commit"
+git add .
+git commit -m "Update submodules to latest commits"
 git push
 ```
 
@@ -102,3 +88,23 @@ This is just a basic guide to get going. For a more extensive guide on the git s
 Monorepo setup
 ---
 A monorepo is a single repository that contains all the code for a project. To separate the code into different parts, you can use directories or packages.
+
+### 1. Create a repository
+Create a repository in GitHub and clone it to your origin - the same way you did for the [parent repository](#1-create-a-parent-repository) in the submodule method.
+___
+
+### 2. Create a subdirectories for each microservice
+
+´´´
+mkdir backend-api 
+mkdir admin-ui 
+mkdir customer-ui
+´´´
+___
+
+Conclusion
+---
+While the potential of submodules.....
+
+___
+*August Levinson*
