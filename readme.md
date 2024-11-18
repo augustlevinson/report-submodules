@@ -1,4 +1,4 @@
-report-submodules-vs-monorepo
+Submodules vs. monorepo
 ===
 
 Choosing how to structure your version management can have a huge impact on the workflow of your team down the line. This report explores two common approaches: gathering all services in a single monorepo vs. using multiple GitHub repositories as submodules in a parent repository, including basic setup instructions. My examples are based on a scooter rental project with six microservices: *admin-web-ui*, *bike-logic*, *db*, *rest-api*, *user-app*, and *user-web-ui*.
