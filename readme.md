@@ -5,11 +5,11 @@ Choosing how to structure your version management can have a huge impact on the 
 
 Contents
 ---
-1. [Prerequisites](#prerequisites)
-2. [Submodules setup](#submodules-setup)
-3. [Monorepo setup](#monorepo-setup)
-4. [Comparison](#comparison)
-5. [Conclusion](#conclusion)
+[Prerequisites](#prerequisites)
+[Submodules setup](#submodules-setup)
+[Monorepo setup](#monorepo-setup)
+[Comparison](#comparison)
+[Conclusion](#conclusion)
 
 Prerequisites
 ---
