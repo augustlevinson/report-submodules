@@ -142,7 +142,7 @@ Comparison
 
 #### Cons
 - **Repository size:** The repository can grow large over time, making it slower to clone and harder to manage.
-- **Permission handling:** Granular access control isn’t possible unless combined with tools like GitHub’s CODEOWNERS to limit who can work on specific directories.
+- **Permission handling:** Granular access control isn’t possible unless combined with tools like GitHub’s CODEOWNERS to limit who can work on specific directories. For private repos, CODEOWNERS is only available through a paid GithHub plan but for public repos it's included. Visit the [CODEOWNERS documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) for a deep dive.
 
 Conclusion
 ---
